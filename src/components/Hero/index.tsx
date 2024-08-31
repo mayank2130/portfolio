@@ -1,8 +1,6 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { Projects } from "../Projects";
-import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import Computer from "../Computer";
+import { Lamp } from "../Lamp";
 
 export function Hero() {
   return (
@@ -20,7 +18,6 @@ export function Hero() {
           </div>
         </h2>
         <div className="flex items-center justify-center h-screen">
-          <Computer />
         </div>
       </div>
     </BackgroundBeamsWithCollision>
