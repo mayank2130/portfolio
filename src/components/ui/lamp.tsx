@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Projects } from "../Projects";
+import { SparklesCore } from "./sparkles";
 
 export default function LampDemo() {
   return (
@@ -22,7 +23,9 @@ export default function LampDemo() {
           worked on.
         </motion.h1>
       </LampContainer>
-      <div className="mt-[-12rem]"> {/* Add this wrapper div */}
+      <div className="mt-[-12rem]">
+        {" "}
+        {/* Add this wrapper div */}
         <Projects />
       </div>
     </>
@@ -99,7 +102,16 @@ export const LampContainer = ({
           }}
           className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400 "
         ></motion.div>
-
+        <div className="w-[40rem] h-40 relative">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </div>
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
