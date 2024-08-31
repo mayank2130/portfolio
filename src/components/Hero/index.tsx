@@ -1,6 +1,6 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { Lamp } from "../Lamp";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -18,6 +18,7 @@ export function Hero() {
           </div>
         </h2>
         <div className="flex items-center justify-center h-screen">
+          <Image alt="desk" height={720} width={720} src="/desk2.png" />
         </div>
       </div>
     </BackgroundBeamsWithCollision>
