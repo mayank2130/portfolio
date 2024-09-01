@@ -17,7 +17,7 @@ const About = () => {
             </h4>
             <div className="space-y-4 ml-10">
               <h5 className="text-lg md:text-xl lg:text-2xl font-light text-black dark:text-white font-sans tracking-normal">
-                who's interested to know why are you reading this? Anyways,
+                who&apos;s interested to know why are you reading this? Anyways,
               </h5>
               <h5 className="text-lg md:text-xl lg:text-2xl font-light text-black dark:text-white font-sans tracking-normal">
                 who has extensive experience with MERN stack and Next JS.
@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div className="m-32">
           <h2 className="text-xl flex flex-col items-start relative z-20 md:text-3xl lg:text-6xl font-semibold text-center text-black dark:text-white font-sans tracking-tight">
-            Anyways, Here's a globe for you -----
+            Anyways, Here&apos;s a globe for you -----
           </h2>
         </div>
 

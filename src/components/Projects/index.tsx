@@ -7,7 +7,7 @@ export const Projects = () => {
       title: "AI SASS Chatbot",
       description:
         "Add your own custom trained chatbot on your website, that answers your business specific questions.",
-        image: "/image.png",
+      image: "/image.png",
       sourceLink: "https://github.com/mayank2130/sass-AI-chatbot",
       siteLink: "",
     },
@@ -32,6 +32,7 @@ export const Projects = () => {
     <div className="flex flex-row justify-center gap-5">
       {details.map((data) => (
         <ThreeDCardDemo
+          key={data.title}
           title={data.title}
           description={data.description}
           sourceLink={data.sourceLink}
