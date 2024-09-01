@@ -4,7 +4,7 @@ import { technologies } from "@/constants/skills";
 
 const Skills = () => {
   return (
-    <div className="p-32">
+    <div className="pt-16 p-32">
       <h2 className="text-2xl flex flex-col items-start relative z-20 md:text-4xl lg:text-7xl font-semibold text-center text-black dark:text-white font-sans tracking-tight">
         What do I know ?
       </h2>
