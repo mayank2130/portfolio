@@ -6,6 +6,19 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import tensorflow from "./tensorflow.svg";
+import prisma from "./prisma.svg";
+import nextjs from "./nextjs.svg";
+import openai from "./openai.svg";
+import python from "./python.svg";
+import go from "./go.svg";
+import kubernetes from "./kubernetes.svg";
+import rust from "./rust.svg";
+import aws from "./aws.svg";
+import redis from "./redis.svg";
+import c from "./c.svg";
+import java from "./java.svg";
+import solidity from "./solidity.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -31,6 +44,19 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  c,
+  solidity,
+  java,
+  prisma,
+  redis,
+  aws,
+  rust,
+  kubernetes,
+  openai,
+  python,
+  nextjs,
+  go,
+  tensorflow,
   logo,
   backend,
   creator,
