@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Projects } from "@/components/Projects";
@@ -9,6 +10,9 @@ export default function Home() {
       <Navbar />
       <div id="hero">
         <Hero />
+      </div>
+      <div className="" id="about">
+        <About />
       </div>
       <div id="lamp-demo">
         <LampDemo />

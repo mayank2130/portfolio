@@ -22,7 +22,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const sections = ["hero", "lamp-demo"];
+      const sections = ["hero", "lamp-demo", "about"];
 
       sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
@@ -51,7 +51,7 @@ export function Navbar() {
     {
       title: "About",
       icon: <IconNewSection size={24} />,
-      onClick: () => scrollToSection("lamp-demo"),
+      onClick: () => scrollToSection("about"),
     },
     {
       title: "Tech",
