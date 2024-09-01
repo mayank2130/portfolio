@@ -22,7 +22,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const sections = ["hero", "lamp-demo", "about"];
+      const sections = ["hero", "about", "tech", "projects"];
 
       sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
@@ -63,14 +63,14 @@ export function Navbar() {
           alt="Aceternity Logo"
         />
       ),
-      href: "#",
+      onClick: () => scrollToSection("tech"),
     },
     {
       title: "Projects",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      onClick: () => scrollToSection("projects"),
     },
     {
       title: "Twitter",
