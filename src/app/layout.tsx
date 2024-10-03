@@ -1,6 +1,4 @@
 import "./globals.css";
-import { ThemeProvider } from "@/context/them-provider";
-// import { Toaster } from "@repo/ui/shadcn/toaster";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -19,14 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          disableTransitionOnChange
-        >
           {children}
-          {/* <Toaster /> */}
-        </ThemeProvider>
       </body>
     </html>
   );

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.1",
     "@react-three/drei": "^9.111.5",
     "@react-three/fiber": "^8.17.6",
     "@tabler/icons-react": "^3.14.0",
