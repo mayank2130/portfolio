@@ -46,12 +46,12 @@ const ProfilePage = () => {
         {/* Bio Sections */}
         <div className="space-y-4 text-gray-600">
           <p>
-            I'm currently building FavProf, an AI professor that teaches
+            I&apos;m currently building FavProf, an AI professor that teaches
             anything you want, starting with biology.
           </p>
 
           <p>
-            I've independently developed multiple apps using React Native as a
+            I&apos;ve independently developed multiple apps using React Native as a
             freelance developer. Along the way, I taught myself coding, design,
             and system architecture. I have a strong background in web
             development, low-level programming languages, and machine learning.
