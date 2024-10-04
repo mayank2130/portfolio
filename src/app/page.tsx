@@ -11,7 +11,7 @@ import { workExperience } from "@/constants/workExperience";
 
 const ProfilePage = () => {
   return (
-    <div className="max-w-2xl mx-auto py-16">
+    <div className="max-w-2xl mx-auto py-16 px-7">
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-4">
