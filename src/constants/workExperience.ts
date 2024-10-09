@@ -68,7 +68,7 @@ export const workExperience = [
     },
     {
       icon: "M",
-      company: "Manage Personal Communities",
+      company: "Personal Communities",
       role: "Nextjs",
       shortdesc: "Create topic specific communities or channels",
       desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
