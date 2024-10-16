@@ -74,7 +74,7 @@ export const workExperience = [
       desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
       bgColor: "bg-black",
       textColor: "text-white",
-      sourceCode: "https://github.com/mayank2130/Grouple",
+      sourceCode: "https://github.com/mayank2130/Grouple/tree/master",
       webLink: "",
     },
   ];
