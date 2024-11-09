@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-import { workExperience } from "@/constants/workExperience";
+import { greatWorkExp, workExperience } from "@/constants/workExperience";
 
 const ProfilePage = () => {
   return (
@@ -66,7 +66,72 @@ const ProfilePage = () => {
 
         {/* Work Experience */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Work</h2>
+          <h2 className="text-xl font-semibold mb-4">Great Projects</h2>
+          <Accordion type="single" collapsible className="space-y-2">
+            {greatWorkExp.map((work, index) => (
+              <AccordionItem
+                value={`item-${index}`}
+                key={index}
+                className="border rounded-lg"
+              >
+                <AccordionTrigger className="hover:no-underline px-4">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
+                    >
+                      {work.icon}
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <div className="font-semibold">{work.company}</div>
+                      {work.role && (
+                        <div className="text-sm text-gray-500">{work.role}</div>
+                      )}
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 pb-4">
+                  <div className="pl-14">
+                    <p className="text-gray-600">{work.shortdesc}</p>
+                    <br />
+                    <p className="text-gray-600">{work.desc}</p>
+                  </div>
+                  <div className="flex justify-between flex-row">
+                    <div className="pl-14">
+                      <br />
+                      {work.sourceCode === "" ? null : (
+                        <Link
+                          href={work.sourceCode}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button className="text-white hover:bg-slate-800 bg-black p-3 rounded-md">
+                            <p>Source Code</p>
+                          </button>
+                        </Link>
+                      )}
+                    </div>
+                    <div className="pl-14">
+                      <br />
+                      {work.webLink === "" ? null : (
+                        <Link
+                          href={work.webLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button className="text-white bg-[#1F305E] hover:bg-[#003262] p-3 rounded-md">
+                            <p>Website</p>
+                          </button>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+
+          <h2 className="text-xl font-semibold mb-4 mt-10">Good Projects</h2>
           <Accordion type="single" collapsible className="space-y-2">
             {workExperience.map((work, index) => (
               <AccordionItem
@@ -129,6 +194,7 @@ const ProfilePage = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          
         </div>
       </div>
     </div>
