@@ -60,14 +60,25 @@ export const workExperience = [
 
 export const greatWorkExp = [
   {
+    icon: "UI",
+    company: "Mobile UI components library",
+    role: "React Natuve, Next.js, tsup",
+    shortdesc: "Build react native apps with 10x modern UI components.",
+    desc: "Use this component library in your react native project by typeing the command  `npx @mayank2310/my-lib-ui add button`.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/",
+    webLink: "",
+  },
+  {
     icon: "Vi",
     company: "Record Video with Loom Clone",
     role: "Nextjs, Electron js (Desktop App), AWS S3 Bucket",
-    shortdesc: "A customizable add-on chatbot for all websites.",
-    desc: "The Chatbot has the entire context of the business, it answers queries of the visitors and helps them find the right product leading to a higher conversion rate.",
+    shortdesc: "A screen recorder desktop app with a dashboard.",
+    desc: "This screen recorder app gives you the main features of loom and you can also view your recorded videos on your dashboard, share them to your clients and generate transcripts and summary of every upload to AWS.",
     bgColor: "bg-orange-600",
     textColor: "text-white",
-    sourceCode: "https://github.com/mayank2130/sass-AI-chatbot",
+    sourceCode: "https://github.com/mayank2130/Video-Share",
     webLink: "",
   },
   {
