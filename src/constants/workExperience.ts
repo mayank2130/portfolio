@@ -1,5 +1,16 @@
 export const workExperience = [
   {
+    icon: "C",
+    company: "Real Time Chat Application",
+    role: "React, Websockets (websocket.io)",
+    shortdesc: "Create or join your friends in a chat room",
+    desc: "Using websockets, this is a real time chat application that allows you to create private chat rooms.",
+    bgColor: "bg-green-500",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/real-time-chat-app",
+    webLink: "https://real-time-chat-app-two-dusky.vercel.app/",
+  },
+  {
     icon: "S",
     company: "Spotify Clone",
     role: "Flutter, Firebase Auth",
@@ -62,13 +73,13 @@ export const greatWorkExp = [
   {
     icon: "UI",
     company: "Mobile UI components library",
-    role: "React Natuve, Next.js, tsup",
+    role: "React Native, Next.js, tsup",
     shortdesc: "Build react native apps with 10x modern UI components.",
     desc: "Use this component library in your react native project by typeing the command  `npx @mayank2310/my-lib-ui add button`.",
     bgColor: "bg-black",
     textColor: "text-white",
-    sourceCode: "https://github.com/mayank2130/",
-    webLink: "",
+    sourceCode: "https://github.com/mayank2130/tapit-ui",
+    webLink: "https://tapui.vercel.app/",
   },
   {
     icon: "Vi",
