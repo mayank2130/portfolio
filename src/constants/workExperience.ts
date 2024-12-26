@@ -1,16 +1,5 @@
 export const workExperience = [
   {
-    icon: "F",
-    company: "Ferrari Landing Page",
-    role: "React, TailwindCSS, Framer Motion",
-    shortdesc: "Create or join your friends in a chat room",
-    desc: "Using websockets, this is a real time chat application that allows you to create private chat rooms.",
-    bgColor: "bg-red-600",
-    textColor: "text-white",
-    sourceCode: "https://github.com/mayank2130/real-time-chat-app",
-    webLink: "https://ferrari-landing-page-theta.vercel.app/",
-  },
-  {
     icon: "S",
     company: "StarBucks Landing Page",
     role: "React, TailwindCSS, Framer Motion",
@@ -20,6 +9,17 @@ export const workExperience = [
     textColor: "text-white",
     sourceCode: "https://github.com/mayank2130/Grouple/tree/master",
     webLink: "https://starbucks-landing-page-beige.vercel.app/",
+  },
+  {
+    icon: "F",
+    company: "Ferrari Landing Page",
+    role: "React, TailwindCSS, Framer Motion",
+    shortdesc: "Create or join your friends in a chat room",
+    desc: "Using websockets, this is a real time chat application that allows you to create private chat rooms.",
+    bgColor: "bg-red-600",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/real-time-chat-app",
+    webLink: "https://ferrari-landing-page-theta.vercel.app/",
   },
   // {
   //   icon: "A",

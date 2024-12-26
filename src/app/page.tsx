@@ -46,15 +46,16 @@ const ProfilePage = () => {
         {/* Bio Sections */}
         <div className="space-y-4 text-gray-600">
           <p>
-            I&apos;m currently building FavProf, an AI professor that teaches
-            anything you want, starting with biology.
+            I&apos;m currently trying to build a web container, browser with an
+            engine, so AI models run on local machines instead of a rented
+            servers.
           </p>
 
           <p>
-            I&apos;ve independently developed multiple apps using React Native
-            as a freelance developer. Along the way, I taught myself coding,
-            design, and system architecture. I have a strong background in web
-            development, low-level programming languages, and machine learning.
+            I&apos;ve independently developed multiple apps using React Native.
+            Along the way, I taught myself coding, design, and system
+            architecture. I have a strong background in web development,
+            low-level programming languages, and machine learning.
           </p>
 
           <p>
@@ -135,7 +136,11 @@ const ProfilePage = () => {
           </h2>
           {workExperience.map((work, index) => (
             <div key={index} className="border rounded-lg p-3 mb-2">
-              <Link href={work.webLink} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={work.webLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="flex items-center gap-4">
                   <div
                     className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
