@@ -11,6 +11,17 @@ export const workExperience = [
     webLink: "https://starbucks-landing-page-beige.vercel.app/",
   },
   {
+    icon: "C",
+    company: "Sporting Bike Landing Page",
+    role: "React, TailwindCSS, Framer Motion",
+    shortdesc: "Create or join your friends in a chat room",
+    desc: "Using websockets, this is a real time chat application that allows you to create private chat rooms.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/real-time-chat-app",
+    webLink: "https://byclyle-frontend.vercel.app/",
+  },
+  {
     icon: "F",
     company: "Ferrari Landing Page",
     role: "React, TailwindCSS, Framer Motion",
