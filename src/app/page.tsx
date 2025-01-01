@@ -21,25 +21,41 @@ const ProfilePage = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-2">
-            <Link
-              href="mailto:mayankthakur1712@gmail.com"
-              className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-            >
-              <Mail className="w-5 h-5 text-gray-600" />
-            </Link>
-            <Link
-              href="https://github.com/mayank2130"
-              className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-            >
-              <Github className="w-5 h-5 text-gray-600" />
-            </Link>
-            <Link
-              href="https://x.com/mayank01322310"
-              className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-            >
-              <Twitter className="w-5 h-5 text-gray-600" />
-            </Link>
+          <div className="flex flex-row justify-between items-center">
+            <div className="flex gap-2">
+              <Link
+                href="mailto:mayankthakur1712@gmail.com"
+                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
+              >
+                <Mail className="w-5 h-5 text-gray-600" />
+              </Link>
+              <Link
+                href="https://github.com/mayank2130"
+                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
+              >
+                <Github className="w-5 h-5 text-gray-600" />
+              </Link>
+              <Link
+                href="https://x.com/mayank01322310"
+                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
+              >
+                <Twitter className="w-5 h-5 text-gray-600" />
+              </Link>
+            </div>
+            <div className="">
+              <Link
+                href="https://www.producthunt.com/posts/tap-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tap&#0045;ui"
+                target="_blank"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=726935&theme=dark"
+                  alt="Tap&#0032;UI - Custom&#0032;mobile&#0032;UI&#0032;components | Product Hunt"
+                  className="width: 250px; height: 54px;"
+                  width="200"
+                  height="28"
+                />
+              </Link>
+            </div>
           </div>
         </div>
 
