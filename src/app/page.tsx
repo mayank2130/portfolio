@@ -18,7 +18,7 @@ const ProfilePage = () => {
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-3xl font-bold">Mayank Thakur</h1>
             <Link href={"/blogs"}>
-              <button className="text-xl bg-gray-400 rounded-lg py-2 px-4">
+              <button className="text-xl bg-gray-500 rounded-lg py-2 px-4">
                 Blogs
               </button>
             </Link>
