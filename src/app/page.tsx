@@ -15,7 +15,14 @@ const ProfilePage = () => {
       <div className="space-y-6">
         {/* Header */}
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold">Mayank Thakur</h1>
+          <div className="flex flex-row justify-between items-center">
+            <h1 className="text-3xl font-bold">Mayank Thakur</h1>
+            <Link href={"/blogs"}>
+              <button className="text-xl bg-gray-400 rounded-lg py-2 px-4">
+                Blogs
+              </button>
+            </Link>
+          </div>
           <div className="flex items-center text-gray-600">
             {/* <div className="flex items-center gap-2">San Francisco, CA</div> */}
           </div>
