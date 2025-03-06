@@ -82,6 +82,18 @@ export const workExperience = [
 
 export const greatWorkExp = [
   {
+    icon: "GC",
+    company: "Gmail Chat",
+    role: "Anthropic API, LLM Tool Calling, LLM in Loop, Gmail Search API",
+    shortdesc:
+      "Using LLM tool calling and a complex designed architecture to extensive email search.",
+    desc: "With tool calling and a complex architecture to put llms in loop for effectively searching emails and finding the right answer to the user query.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/",
+    webLink: "",
+  },
+  {
     icon: "UI",
     company: "Mobile UI components library",
     role: "React Native, Next.js, tsup",
