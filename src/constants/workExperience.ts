@@ -1,16 +1,5 @@
 export const workExperience = [
   {
-    icon: "CA",
-    company: "Cal AI",
-    role: "React, TailwindCSS, Framer Motion",
-    shortdesc: "Create topic specific communities or channels",
-    desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
-    bgColor: "bg-black",
-    textColor: "text-white",
-    sourceCode: "",
-    webLink: "https://cal-ai-web.vercel.app/",
-  },
-  {
     icon: "S",
     company: "StarBucks Landing Page",
     role: "React, TailwindCSS, Framer Motion",
@@ -89,6 +78,31 @@ export const workExperience = [
   //   sourceCode: "https://github.com/mayank2130/Grouple/tree/master",
   //   webLink: "",
   // },
+];
+
+export const vibeCoded = [
+  {
+    icon: "LA",
+    company: "Luxe Atelier",
+    role: "React, TailwindCSS, Framer Motion",
+    shortdesc: "Create topic specific communities or channels",
+    desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "",
+    webLink: "https://luxe-atelier.vercel.app/",
+  },
+  {
+    icon: "CA",
+    company: "Cal AI",
+    role: "React, TailwindCSS, Framer Motion",
+    shortdesc: "Create topic specific communities or channels",
+    desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "",
+    webLink: "https://cal-ai-web.vercel.app/",
+  }
 ];
 
 export const greatWorkExp = [

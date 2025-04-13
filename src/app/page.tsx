@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Github, Linkedin, Twitter, ChevronDown } from "lucide-react";
+import { Mail, Github, Twitter } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +7,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-import { greatWorkExp, workExperience } from "@/constants/workExperience";
+import { greatWorkExp, vibeCoded, workExperience } from "@/constants/workExperience";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const ProfilePage = () => {
   return (
@@ -16,7 +17,7 @@ const ProfilePage = () => {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex flex-row justify-between items-center">
-            <h1 className="text-3xl font-bold">Mayank' Thakur</h1>
+            <h1 className="text-3xl font-bold">Mayank Thakur</h1>
             <Link href={"/blogs"}>
               <button className="text-xl bg-gray-500 rounded-lg py-2 px-4">
                 Blogs
@@ -90,96 +91,130 @@ const ProfilePage = () => {
 
         {/* Work Experience */}
         <div>
-          <h2 className="text-xl font-semibold mb-4">Full Stack Projects</h2>
-          <Accordion type="single" collapsible className="space-y-2">
-            {greatWorkExp.map((work, index) => (
-              <AccordionItem
-                value={`item-${index}`}
-                key={index}
-                className="border rounded-lg"
-              >
-                <AccordionTrigger className="hover:no-underline px-4">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
-                    >
-                      {work.icon}
-                    </div>
-                    <div className="flex flex-col items-start">
-                      <div className="font-semibold">{work.company}</div>
-                      {work.role && (
-                        <div className="text-sm text-gray-500">{work.role}</div>
-                      )}
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-4 pb-4">
-                  <div className="pl-14">
-                    <p className="text-gray-600">{work.shortdesc}</p>
-                    <br />
-                    <p className="text-gray-600">{work.desc}</p>
-                  </div>
-                  <div className="flex justify-between flex-row">
-                    <div className="pl-14">
-                      <br />
-                      {work.sourceCode === "" ? null : (
-                        <Link
-                          href={work.sourceCode}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <button className="text-white hover:bg-slate-800 bg-black p-3 rounded-md">
-                            <p>Source Code</p>
-                          </button>
-                        </Link>
-                      )}
-                    </div>
-                    <div className="pl-14">
-                      <br />
-                      {work.webLink === "" ? null : (
-                        <Link
-                          href={work.webLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <button className="text-white bg-[#1F305E] hover:bg-[#003262] p-3 rounded-md">
-                            <p>Website</p>
-                          </button>
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <Tabs defaultValue="fullstack" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-4">
+              <TabsTrigger value="fullstack" className="text-base font-semibold">Full Stack Projects</TabsTrigger>
+              <TabsTrigger value="vibes" className="text-base font-semibold">Vibe Coded</TabsTrigger>
+              <TabsTrigger value="frontend" className="text-base font-semibold">Frontend Projects</TabsTrigger>
+            </TabsList>
 
-          <h2 className="text-xl font-semibold mb-4 mt-10">
-            Frontend Projects
-          </h2>
-          {workExperience.map((work, index) => (
-            <div key={index} className="border rounded-lg p-3 mb-2">
-              <Link
-                href={work.webLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex items-center gap-4">
-                  <div
-                    className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
+            <TabsContent value="fullstack">
+              <Accordion type="single" collapsible className="space-y-2">
+                {greatWorkExp.map((work, index) => (
+                  <AccordionItem
+                    value={`item-${index}`}
+                    key={index}
+                    className="border rounded-lg"
                   >
-                    {work.icon}
-                  </div>
-                  <div className="flex flex-col items-start">
-                    <div className="font-semibold">{work.company}</div>
-                    {work.role && (
-                      <div className="text-sm text-gray-500">{work.role}</div>
-                    )}
-                  </div>
+                    <AccordionTrigger className="hover:no-underline px-4">
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
+                        >
+                          {work.icon}
+                        </div>
+                        <div className="flex flex-col items-start">
+                          <div className="font-semibold">{work.company}</div>
+                          {work.role && (
+                            <div className="text-sm text-gray-500">{work.role}</div>
+                          )}
+                        </div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-4 pb-4">
+                      <div className="pl-14">
+                        <p className="text-gray-600">{work.shortdesc}</p>
+                        <br />
+                        <p className="text-gray-600">{work.desc}</p>
+                      </div>
+                      <div className="flex justify-between flex-row">
+                        <div className="pl-14">
+                          <br />
+                          {work.sourceCode === "" ? null : (
+                            <Link
+                              href={work.sourceCode}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <button className="text-white hover:bg-slate-800 bg-black p-3 rounded-md">
+                                <p>Source Code</p>
+                              </button>
+                            </Link>
+                          )}
+                        </div>
+                        <div className="pl-14">
+                          <br />
+                          {work.webLink === "" ? null : (
+                            <Link
+                              href={work.webLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <button className="text-white bg-[#1F305E] hover:bg-[#003262] p-3 rounded-md">
+                                <p>Website</p>
+                              </button>
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </TabsContent>
+
+            <TabsContent value="vibes">
+              {vibeCoded.map((work, index) => (
+                <div key={index} className="border rounded-lg p-3 mb-2">
+                  <Link
+                    href={work.webLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div
+                        className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
+                      >
+                        {work.icon}
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <div className="font-semibold">{work.company}</div>
+                        {work.role && (
+                          <div className="text-sm text-gray-500">{work.role}</div>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-          ))}
+              ))}
+            </TabsContent>
+
+            <TabsContent value="frontend">
+              {workExperience.map((work, index) => (
+                <div key={index} className="border rounded-lg p-3 mb-2">
+                  <Link
+                    href={work.webLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div
+                        className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
+                      >
+                        {work.icon}
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <div className="font-semibold">{work.company}</div>
+                        {work.role && (
+                          <div className="text-sm text-gray-500">{work.role}</div>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </div>
