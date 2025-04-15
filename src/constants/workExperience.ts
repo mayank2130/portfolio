@@ -82,6 +82,17 @@ export const workExperience = [
 
 export const vibeCoded = [
   {
+    icon: "DA",
+    company: "Diary Vibees",
+    role: "React, TailwindCSS, Framer Motion",
+    shortdesc: "Create topic specific communities or channels",
+    desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
+    bgColor: "bg-orange-600",
+    textColor: "text-white",
+    sourceCode: "",
+    webLink: "https://diary-vibes.vercel.app/",
+  },
+  {
     icon: "LA",
     company: "Luxe Atelier",
     role: "React, TailwindCSS, Framer Motion",
