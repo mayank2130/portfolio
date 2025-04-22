@@ -1,5 +1,16 @@
 export const workExperience = [
   {
+    icon: "C",
+    company: "Coin Market Cap",
+    role: "NextJs, TailwindCSS, Framer Motion",
+    shortdesc: "Create topic specific communities or channels",
+    desc: "People subscribe to your channels, becoming contributors and gaining value from real life experiences. Share more resources and profound ideas to grow your community.",
+    bgColor: "bg-blue-600",
+    textColor: "text-white",
+    sourceCode: "https://github.com/mayank2130/coin-market-cap",
+    webLink: "https://coin-marketcap-iota.vercel.app/",
+  },
+  {
     icon: "S",
     company: "StarBucks Landing Page",
     role: "React, TailwindCSS, Framer Motion",
