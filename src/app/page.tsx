@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { greatWorkExp, vibeCoded, workExperience } from "@/constants/workExperience";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 const ProfilePage = () => {
   return (
@@ -19,9 +20,9 @@ const ProfilePage = () => {
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-3xl font-bold">Mayank Thakur</h1>
             <Link href={"/blogs"}>
-              <button className="text-xl bg-gray-500 rounded-lg py-2 px-4">
+              <Button className="text-lg rounded-lg py-2 px-4" variant="default">
                 Blogs
-              </button>
+              </Button>
             </Link>
           </div>
           <div className="flex items-center text-gray-600">
@@ -51,7 +52,7 @@ const ProfilePage = () => {
               </Link>
             </div>
             <div className="">
-              <Link
+              {/* <Link
                 href="https://www.producthunt.com/posts/tap-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tap&#0045;ui"
                 target="_blank"
               >
@@ -62,7 +63,7 @@ const ProfilePage = () => {
                   width="200"
                   height="28"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -70,9 +71,7 @@ const ProfilePage = () => {
         {/* Bio Sections */}
         <div className="space-y-4 text-gray-600">
           <p>
-            I&apos;m currently trying to build a web container, browser with an
-            engine, so AI models run on local machines instead of a rented
-            servers.
+            I&apos;m currently trying to build something useful, something in AI.
           </p>
 
           <p>
@@ -85,14 +84,14 @@ const ProfilePage = () => {
           <p>
             I like to learn about different empires, philosophers and Romans.
             <br /> Reach out if you want to chat, you can usually find me on
-            Twitter.
+            X.
           </p>
         </div>
 
         {/* Work Experience */}
         <div>
           <Tabs defaultValue="fullstack" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-4">
+            <TabsList className="flex flex-row justify-between w-full bg-gray-200 p-4 mb-4">
               <TabsTrigger value="fullstack" className="text-base font-semibold">Full Stack Projects</TabsTrigger>
               <TabsTrigger value="vibes" className="text-base font-semibold">Vibe Coded</TabsTrigger>
               <TabsTrigger value="frontend" className="text-base font-semibold">Frontend Projects</TabsTrigger>

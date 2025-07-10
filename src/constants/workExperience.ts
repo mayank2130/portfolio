@@ -129,6 +129,18 @@ export const vibeCoded = [
 
 export const greatWorkExp = [
   {
+    icon: "CAP",
+    company: "CreatorCapX",
+    role: "Ffmpeg, Background jobs, EC2, Postgres, Redis",
+    shortdesc:
+      "AI generated clips with subtitles using Ffmpeg.",
+    desc: "Longer videos are converted to short clips/reels with subtitles using Ffmpeg. A video editor within the browser, ability to upload these generated clips to social media.",
+    bgColor: "bg-black",
+    textColor: "text-white",
+    sourceCode: "",
+    webLink: "https://creatorcapx.com/",
+  },
+  {
     icon: "GC",
     company: "Gmail Chat",
     role: "Anthropic API, LLM Tool Calling, LLM in Loop, Gmail Search API",
