@@ -10,6 +10,7 @@ import Link from "next/link";
 import { greatWorkExp, vibeCoded, workExperience } from "@/constants/workExperience";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const ProfilePage = () => {
   return (
@@ -86,6 +87,25 @@ const ProfilePage = () => {
             <br /> Reach out if you want to chat, you can usually find me on
             X.
           </p>
+        </div>
+        <div className="space-y-4">
+          <Link 
+            href="https://tryvidhi.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-fit"
+          >
+            <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
+              <Image 
+                src="/vidhi.png" 
+                alt="Mayank Thakur" 
+                width={360} 
+                height={360}
+                className="rounded-lg" 
+              />
+              <p className="text-sm text-gray-600 mt-2">tryvidhi.com →</p>
+            </div>
+          </Link>
         </div>
 
         {/* Work Experience */}
