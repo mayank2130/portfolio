@@ -1,243 +1,213 @@
-import React from "react";
-import { Mail, Github, Twitter } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Link from "next/link";
-import { greatWorkExp, vibeCoded, workExperience } from "@/constants/workExperience";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+"use client";
+
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { LinkPreview } from "@/components/ui/link-preview";
+import Link from "next/link";
+import React, { useState } from "react";
+import Projects from "@/components/Projects";
 
-const ProfilePage = () => {
+export default function JustinGuoPortfolio() {
+  const [showProjects, setShowProjects] = useState(false);
+
   return (
-    <div className="max-w-2xl mx-auto py-16 px-7">
-      <div className="space-y-6">
-        {/* Header */}
-        <div className="space-y-4">
-          <div className="flex flex-row justify-between items-center">
-            <h1 className="text-3xl font-bold">Mayank Thakur</h1>
-            <Link href={"/blogs"}>
-              <Button className="text-lg rounded-lg py-2 px-4" variant="default">
-                Blogs
-              </Button>
-            </Link>
-          </div>
-          <div className="flex items-center text-gray-600">
-            {/* <div className="flex items-center gap-2">San Francisco, CA</div> */}
-          </div>
-
-          {/* Social Links */}
-          <div className="flex flex-row justify-between items-center">
-            <div className="flex gap-2">
-              <Link
-                href="mailto:mayankthakur1712@gmail.com"
-                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-              >
-                <Mail className="w-5 h-5 text-gray-600" />
-              </Link>
-              <Link
-                href="https://github.com/mayank2130"
-                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-              >
-                <Github className="w-5 h-5 text-gray-600" />
-              </Link>
-              <Link
-                href="https://x.com/mayank01322310"
-                className="p-2 rounded-md hover:bg-gray-100 bg-slate-100"
-              >
-                <Twitter className="w-5 h-5 text-gray-600" />
-              </Link>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0f3c2d_0,#0b291e_35%,#051510_100%)] text-white p-8 flex items-center justify-center">
+      <div className="max-w-4xl w-full space-y-6">
+        {!showProjects && (
+          <>
+            <div className="space-y-2">
+              <h1 className="text-4xl font-light">
+                <span className="text-white">mayank thakur</span>
+                <span className="text-green-400"> • elon&apos;s successor</span>
+              </h1>
             </div>
-            <div className="">
-              {/* <Link
-                href="https://www.producthunt.com/posts/tap-ui?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tap&#0045;ui"
-                target="_blank"
-              >
-                <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=726935&theme=dark"
-                  alt="Tap&#0032;UI - Custom&#0032;mobile&#0032;UI&#0032;components | Product Hunt"
-                  className="width: 250px; height: 54px;"
-                  width="200"
-                  height="28"
-                />
-              </Link> */}
+
+            <div className="space-y-4">
+              <p className="text-lg font-medium">
+                i want to remove inefficiency from the world.
+              </p>
+
+              <p className="text-base">
+                however, I&apos;m not a farmer removing weeds. I&apos;m a
+                software engineer.
+              </p>
+
+              <p className="text-xl italic underline decoration-2">
+                I ship products that solve problems.
+              </p>
             </div>
+
+            <div className="space-y-4">
+              <p className="text-base">
+                I&apos;m currently building{" "}
+                <Link
+                  href="https://tryvidhi.com"
+                  target="_blank"
+                  className="underline decoration-2"
+                >
+                  <LinkPreview
+                    isStatic={true}
+                    imageSrc="vidhi.png"
+                    url="https://tryvidhi.com"
+                    className="text-white italic font-semibold hover:text-green-400 transition-colors"
+                  >
+                    Vidhi
+                  </LinkPreview>
+                </Link>
+                , where we&apos;re turning the typical website chatbot — the one
+                floating in the bottom-right corner — into what it was always
+                meant to be: a true AI-native assistant.
+              </p>
+
+              <p className="text-base">
+                I built{" "}
+                <span className="italic">
+                  a clip generator turns youtube videos into short clips
+                </span>
+                , several other projects I&apos;m proud of; paid my debts, and
+                completed <span className="italic">3 internships</span> at
+                seed-stage startups.
+              </p>
+
+              <p className="text-base">
+                these experiences have built a{" "}
+                <span className="font-semibold">versatile skillset</span> in
+                product, design, engineering, and distribution while building a
+                sharp, entrepreneurial character.
+              </p>
+
+              <p className="text-base">
+                personally, I&apos;m a{" "}
+                <HoverCard>
+                  <HoverCardTrigger>
+                    {" "}
+                    <span className="decoration-dotted cursor-pointer underline decoration-2 decoration-green-400 underline-offset-4">
+                      football player
+                    </span>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="text-white text-sm border-none bg-gradient-to-r from-emerald-700 to-emerald-900">
+                    CF/RW/LF. Life peaked when i scored an exact goal
+                    <Link
+                      href="https://www.youtube.com/shorts/p9YQGFIzQe0"
+                      target="_blank"
+                      className="text-green-400"
+                    >
+                      {" "}
+                      like this.
+                    </Link>
+                  </HoverCardContent>
+                </HoverCard>
+                ,{" "}
+                <HoverCard>
+                  <HoverCardTrigger>
+                    <span className="decoration-dotted cursor-pointer underline decoration-2 decoration-green-400 underline-offset-4">
+                      reader
+                    </span>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="text-white text-sm border-none bg-gradient-to-r from-emerald-700 to-emerald-900">
+                    I am too fascinated by the world of Romans. Also, Robert
+                    Greene.
+                  </HoverCardContent>
+                </HoverCard>
+                , and{" "}
+                <HoverCard>
+                  <HoverCardTrigger>
+                    <span className="decoration-dotted cursor-pointer underline decoration-2 decoration-green-400 underline-offset-4">
+                      a deep thinker
+                    </span>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="text-white text-sm border-none bg-gradient-to-r from-emerald-900 to-emerald-700">
+                    I spend my mental thrust on first principles thinking about
+                    things i am interested in.
+                  </HoverCardContent>
+                </HoverCard>
+                .
+              </p>
+
+              <p className="text-base">
+                I love meeting new people and hearing new ideas-{" "}
+                <span className="font-semibold">
+                  mayankthakur1712@gmail.com
+                </span>
+              </p>
+            </div>
+          </>
+        )}
+
+        {showProjects && <Projects />}
+        <div className="flex items-center space-x-8 pt-6 border-t border-white/20">
+          <div className=" flex items-center space-x-2" title="Projects">
+            <Button
+              className={`p-0 bg-transparent border-none px-2 hover:bg-transparent text-white/70 hover:text-white transition-all duration-300 ${
+                showProjects
+                  ? "bg-gray-200 hover:bg-gray-300 hover:text-black text-black"
+                  : "bg-transparent"
+              }`}
+              onClick={() => setShowProjects(!showProjects)}
+            >
+              <div className="flex items-center space-x-2 cursor-pointer">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2L2 22h20L12 2z"></path>
+                </svg>
+                <span className="text-base">Projects</span>
+              </div>
+            </Button>
           </div>
-        </div>
 
-        {/* Bio Sections */}
-        <div className="space-y-4 text-gray-600">
-          <p>
-            I&apos;m currently trying to build something useful, something in AI.
-          </p>
-
-          <p>
-            I&apos;ve independently developed multiple apps using React Native.
-            Along the way, I taught myself coding, design, and system
-            architecture. I have a strong background in web development,
-            low-level programming languages, and machine learning.
-          </p>
-
-          <p>
-            I like to learn about different empires, philosophers and Romans.
-            <br /> Reach out if you want to chat, you can usually find me on
-            X.
-          </p>
-        </div>
-        <div className="space-y-4">
-          <Link 
-            href="https://tryvidhi.com"
+          <Link
+            href="https://x.com/MaianciusThakur"
             target="_blank"
             rel="noopener noreferrer"
-            className="block max-w-fit"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            title="Twitter"
           >
-            <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200">
-              <Image 
-                src="/vidhi.png" 
-                alt="Mayank Thakur" 
-                width={360} 
-                height={360}
-                className="rounded-lg" 
-              />
-              <p className="text-sm text-gray-600 mt-2">tryvidhi.com →</p>
+            <div className="flex items-center space-x-2 cursor-pointer">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+              <span className="text-base">Twitter</span>
             </div>
           </Link>
-        </div>
 
-        {/* Work Experience */}
-        <div>
-          <Tabs defaultValue="fullstack" className="w-full">
-            <TabsList className="flex flex-row justify-between w-full bg-gray-200 p-4 mb-4">
-              <TabsTrigger value="fullstack" className="text-base font-semibold">Full Stack Projects</TabsTrigger>
-              <TabsTrigger value="vibes" className="text-base font-semibold">Vibe Coded</TabsTrigger>
-              <TabsTrigger value="frontend" className="text-base font-semibold">Frontend Projects</TabsTrigger>
-            </TabsList>
+          <Link
+            href="https://mayank2130.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            title="Writing"
+          >
+            <div className="flex items-center space-x-2 cursor-pointer">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path>
+              </svg>
+              <span className="text-sm sm:text-base">Writing</span>
+            </div>
+          </Link>
 
-            <TabsContent value="fullstack">
-              <Accordion type="single" collapsible className="space-y-2">
-                {greatWorkExp.map((work, index) => (
-                  <AccordionItem
-                    value={`item-${index}`}
-                    key={index}
-                    className="border rounded-lg"
-                  >
-                    <AccordionTrigger className="hover:no-underline px-4">
-                      <div className="flex items-center gap-4">
-                        <div
-                          className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
-                        >
-                          {work.icon}
-                        </div>
-                        <div className="flex flex-col items-start">
-                          <div className="font-semibold">{work.company}</div>
-                          {work.role && (
-                            <div className="text-sm text-gray-500">{work.role}</div>
-                          )}
-                        </div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-4 pb-4">
-                      <div className="pl-14">
-                        <p className="text-gray-600">{work.shortdesc}</p>
-                        <br />
-                        <p className="text-gray-600">{work.desc}</p>
-                      </div>
-                      <div className="flex justify-between flex-row">
-                        <div className="pl-14">
-                          <br />
-                          {work.sourceCode === "" ? null : (
-                            <Link
-                              href={work.sourceCode}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <button className="text-white hover:bg-slate-800 bg-black p-3 rounded-md">
-                                <p>Source Code</p>
-                              </button>
-                            </Link>
-                          )}
-                        </div>
-                        <div className="pl-14">
-                          <br />
-                          {work.webLink === "" ? null : (
-                            <Link
-                              href={work.webLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <button className="text-white bg-[#1F305E] hover:bg-[#003262] p-3 rounded-md">
-                                <p>Website</p>
-                              </button>
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </TabsContent>
-
-            <TabsContent value="vibes">
-              {vibeCoded.map((work, index) => (
-                <div key={index} className="border rounded-lg p-3 mb-2">
-                  <Link
-                    href={work.webLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
-                      >
-                        {work.icon}
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <div className="font-semibold">{work.company}</div>
-                        {work.role && (
-                          <div className="text-sm text-gray-500">{work.role}</div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </TabsContent>
-
-            <TabsContent value="frontend">
-              {workExperience.map((work, index) => (
-                <div key={index} className="border rounded-lg p-3 mb-2">
-                  <Link
-                    href={work.webLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`w-10 h-10 ${work.bgColor} ${work.textColor} rounded-lg flex items-center justify-center font-medium`}
-                      >
-                        {work.icon}
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <div className="font-semibold">{work.company}</div>
-                        {work.role && (
-                          <div className="text-sm text-gray-500">{work.role}</div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </TabsContent>
-          </Tabs>
+          <Link
+            href="https://www.canva.com/design/DAFr3jQMPDI/oQ2_PofKolXK1hztSgmPgA/view?utm_content=DAFr3jQMPDI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3a5cb2e22e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            title="Resume"
+          >
+            <div className="flex items-center space-x-2 cursor-pointer">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.25 2.5h-9a1.5 1.5 0 00-1.5 1.5v16a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V7.25L14.25 2.5zm0 1.5L18.75 8h-4.5V4zm-9 15.5V4h7.5v4.5a1.5 1.5 0 001.5 1.5h4.5v10h-13.5zm3-8.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zm0 3a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zm0 3a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75z"></path>
+              </svg>
+              <span className="text-sm sm:text-base">Resume</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default ProfilePage;
+}
