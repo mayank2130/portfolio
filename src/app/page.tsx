@@ -15,34 +15,34 @@ export default function JustinGuoPortfolio() {
   const [showProjects, setShowProjects] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0f3c2d_0,#0b291e_35%,#051510_100%)] text-white p-8 flex items-center justify-center">
-      <div className="max-w-4xl w-full space-y-6">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_50%,#0f3c2d_0,#0b291e_35%,#051510_100%)] text-white p-4 sm:p-6 md:p-8 flex items-center justify-center">
+      <div className="max-w-4xl w-full space-y-4 sm:space-y-6">
         {!showProjects && (
           <>
             <div className="space-y-2">
-              <h1 className="text-4xl font-light">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-light">
                 <span className="text-white">mayank thakur</span>
                 <span className="text-green-400"> • elon&apos;s successor</span>
               </h1>
             </div>
 
-            <div className="space-y-4">
-              <p className="text-lg font-medium">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-base sm:text-lg font-medium">
                 i want to remove inefficiency from the world.
               </p>
 
-              <p className="text-base">
+              <p className="text-sm sm:text-base">
                 however, I&apos;m not a farmer removing weeds. I&apos;m a
                 software engineer.
               </p>
 
-              <p className="text-xl italic underline decoration-2">
+              <p className="text-lg sm:text-xl italic underline decoration-2">
                 I ship products that solve problems.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <p className="text-base">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="text-sm sm:text-base">
                 I&apos;m currently building{" "}
                 <Link
                   href="https://tryvidhi.com"
@@ -61,26 +61,14 @@ export default function JustinGuoPortfolio() {
                 , where we&apos;re turning the typical website chatbot — the one
                 floating in the bottom-right corner — into what it was always
                 meant to be: a true AI-native assistant.
+              </div>
+
+              <p className="text-sm sm:text-base">
+                Last Month, I built a clip generator turns youtube videos into short clips,
+                meanwhile I participated in 7 hackathons this year and maintaining a 30% win-rate.
               </p>
 
-              <p className="text-base">
-                I built{" "}
-                <span className="italic">
-                  a clip generator turns youtube videos into short clips
-                </span>
-                , several other projects I&apos;m proud of; paid my debts, and
-                completed <span className="italic">3 internships</span> at
-                seed-stage startups.
-              </p>
-
-              <p className="text-base">
-                these experiences have built a{" "}
-                <span className="font-semibold">versatile skillset</span> in
-                product, design, engineering, and distribution while building a
-                sharp, entrepreneurial character.
-              </p>
-
-              <p className="text-base">
+              <p className="text-sm sm:text-base">
                 personally, I&apos;m a{" "}
                 <HoverCard>
                   <HoverCardTrigger>
@@ -90,7 +78,7 @@ export default function JustinGuoPortfolio() {
                     </span>
                   </HoverCardTrigger>
                   <HoverCardContent className="text-white text-sm border-none bg-gradient-to-r from-emerald-700 to-emerald-900">
-                    CF/RW/LF. Life peaked when i scored an exact goal
+                    CF/RW/LW. Life peaked when i scored an exact goal
                     <Link
                       href="https://www.youtube.com/shorts/p9YQGFIzQe0"
                       target="_blank"
@@ -128,7 +116,7 @@ export default function JustinGuoPortfolio() {
                 .
               </p>
 
-              <p className="text-base">
+              <p className="text-sm sm:text-base">
                 I love meeting new people and hearing new ideas-{" "}
                 <span className="font-semibold">
                   mayankthakur1712@gmail.com
@@ -139,10 +127,10 @@ export default function JustinGuoPortfolio() {
         )}
 
         {showProjects && <Projects />}
-        <div className="flex items-center space-x-8 pt-6 border-t border-white/20">
-          <div className=" flex items-center space-x-2" title="Projects">
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 pt-4 sm:pt-6 border-t border-white/20">
+          <div className="flex items-center" title="Projects">
             <Button
-              className={`p-0 bg-transparent border-none px-2 hover:bg-transparent text-white/70 hover:text-white transition-all duration-300 ${
+              className={`p-0 bg-transparent border-none px-2 py-2 hover:bg-transparent text-white/70 hover:text-white transition-all duration-300 min-h-[44px] ${
                 showProjects
                   ? "bg-gray-200 hover:bg-gray-300 hover:text-black text-black"
                   : "bg-transparent"
@@ -157,7 +145,7 @@ export default function JustinGuoPortfolio() {
                 >
                   <path d="M12 2L2 22h20L12 2z"></path>
                 </svg>
-                <span className="text-base">Projects</span>
+                <span className="text-sm sm:text-base">Projects</span>
               </div>
             </Button>
           </div>
@@ -166,14 +154,14 @@ export default function JustinGuoPortfolio() {
             href="https://x.com/MaianciusThakur"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center min-h-[44px] px-2"
             title="Twitter"
           >
             <div className="flex items-center space-x-2 cursor-pointer">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
               </svg>
-              <span className="text-base">Twitter</span>
+              <span className="text-sm sm:text-base">Twitter</span>
             </div>
           </Link>
 
@@ -181,7 +169,7 @@ export default function JustinGuoPortfolio() {
             href="https://mayank2130.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center min-h-[44px] px-2"
             title="Writing"
           >
             <div className="flex items-center space-x-2 cursor-pointer">
@@ -196,11 +184,11 @@ export default function JustinGuoPortfolio() {
             href="https://www.canva.com/design/DAFr3jQMPDI/oQ2_PofKolXK1hztSgmPgA/view?utm_content=DAFr3jQMPDI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3a5cb2e22e"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            className="text-white/70 hover:text-white transition-all duration-300 flex items-center min-h-[44px] px-2"
             title="Resume"
           >
             <div className="flex items-center space-x-2 cursor-pointer">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.25 2.5h-9a1.5 1.5 0 00-1.5 1.5v16a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V7.25L14.25 2.5zm0 1.5L18.75 8h-4.5V4zm-9 15.5V4h7.5v4.5a1.5 1.5 0 001.5 1.5h4.5v10h-13.5zm3-8.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zm0 3a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zm0 3a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75z"></path>
               </svg>
               <span className="text-sm sm:text-base">Resume</span>

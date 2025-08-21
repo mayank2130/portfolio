@@ -137,7 +137,7 @@ export const greatWorkExp = [
     desc: "Longer videos are converted to short clips/reels with subtitles using Ffmpeg. A video editor within the browser, ability to upload these generated clips to social media.",
     bgColor: "bg-black",
     textColor: "text-white",
-    sourceCode: "",
+    sourceCode: "https://github.com/mayank2130/tube-launch",
     webLink: "https://creatorcapx.com/",
   },
   {
@@ -149,8 +149,8 @@ export const greatWorkExp = [
     desc: "With tool calling and a complex architecture to put llms in loop for effectively searching emails and finding the right answer to the user query.",
     bgColor: "bg-black",
     textColor: "text-white",
-    sourceCode: "https://github.com/mayank2130/",
-    webLink: "",
+    sourceCode: "https://github.com/mayank2130/Email-AI-Agent",
+    webLink: "https://www.loom.com/share/44ce5759bf504f238841ae902ce84c4a?sid=6b5ca15e-8aff-4637-b229-a2538aba0128",
   },
   {
     icon: "UI",
