@@ -12,6 +12,10 @@ import {
   workExperience,
 } from "@/constants/workExperience";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import SitePreviewCard from "../PreviewCard";
+import { ExternalLink, Eye } from "lucide-react";
+import { Dialog, DialogContent } from "../Dialog";
+import { DialogTrigger } from "@radix-ui/react-dialog";
 
 const ProfilePage = () => {
   return (
@@ -117,6 +121,16 @@ const ProfilePage = () => {
                                 </button>
                               </Link>
                             )}
+                            {index === 1 && (
+                              <Dialog>
+                                <DialogTrigger className="border-white/20 border p-2 rounded-md">
+                                  <Eye className="w-4 h-4 text-white/85" />
+                                </DialogTrigger>
+                                <DialogContent className="rounded-2xl p-2 bg-[#383838] border-none max-w-3xl sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+                                  <SitePreviewCard url="https://tracklinks.in" />
+                                </DialogContent>
+                              </Dialog>
+                            )}
                             {work.webLink !== "" && (
                               <Link
                                 href={work.webLink}
@@ -125,7 +139,7 @@ const ProfilePage = () => {
                                 className="flex-1 sm:flex-initial"
                               >
                                 <button className="text-white bg-transparent hover:bg-transparent hover:border-white/60 border-white/20 border p-2 rounded-md text-sm sm:text-sm w-full">
-                                  Website
+                                  <ExternalLink className="w-4 h-4 text-white/85" />
                                 </button>
                               </Link>
                             )}
