@@ -55,7 +55,7 @@ export default function JustinGuoPortfolio() {
                     url="https://echoed.in"
                     className="text-white italic font-semibold hover:text-green-400 transition-colors"
                   >
-                    Echoed
+                    Echoed,{' '}
                   </LinkPreview>
                 </Link>
                 a platform that replaces inefficient surveys and scheduled calls
