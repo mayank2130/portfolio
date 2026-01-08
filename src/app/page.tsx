@@ -45,27 +45,29 @@ export default function JustinGuoPortfolio() {
               <div className="text-sm sm:text-base">
                 I&apos;m currently building{" "}
                 <Link
-                  href="https://tryvidhi.com"
+                  href="https://echoed.in"
                   target="_blank"
                   className="underline decoration-2"
                 >
                   <LinkPreview
                     isStatic={true}
-                    imageSrc="vidhi.png"
-                    url="https://tryvidhi.com"
+                    imageSrc="echoed.png"
+                    url="https://echoed.in"
                     className="text-white italic font-semibold hover:text-green-400 transition-colors"
                   >
-                    Vidhi
+                    Echoed
                   </LinkPreview>
                 </Link>
-                , where we&apos;re turning the typical website chatbot — the one
-                floating in the bottom-right corner — into what it was always
-                meant to be: a true AI-native assistant.
+                a platform that replaces inefficient surveys and scheduled calls
+                with instant voice feedback. We help companies capture authentic
+                user insights directly on their website, without the friction of
+                mass emails.
               </div>
 
               <p className="text-sm sm:text-base">
-                Last Month, I built a clip generator turns youtube videos into short clips,
-                meanwhile I participated in 7 hackathons this year and maintaining a 30% win-rate.
+                Last Month, I built a clip generator turns youtube videos into
+                short clips, meanwhile I participated in 7 hackathons this year
+                and maintaining a 30% win-rate.
               </p>
 
               <p className="text-sm sm:text-base">
